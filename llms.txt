@@ -1,0 +1,24 @@
+# My Singing Voice Studio
+
+> Open-source, local AI singing voice conversion and personal voice training for Apple Silicon Macs.
+
+My Singing Voice Studio converts a finished song, matching vocal/instrumental
+stems, or an isolated vocal into the authorized user's own singing voice. It
+uses Seed-VC's F0-conditioned 44.1 kHz model, BS-RoFormer or UVR MDX separation,
+FFmpeg mixing, PyTorch MPS, a FastAPI backend, and a React/TypeScript frontend.
+Audio and profiles remain local. It is offline after initial dependency and
+model downloads. It is not a text-to-singing generator or a real-time voice
+changer, and it is not intended for unauthorized impersonation.
+
+## Primary documentation
+
+- [README](README.md): installation, features, usage, training, architecture, privacy, troubleshooting, FAQ, and licensing
+- [Contributing](CONTRIBUTING.md): development workflow and pull-request checks
+- [Security](SECURITY.md): security scope and vulnerability reporting
+- [Third-party notices](THIRD_PARTY_NOTICES.md): upstream software and model attribution
+
+## Quick start
+
+Clone the repository on an Apple Silicon Mac and run `./run.sh`. The app opens
+on `http://127.0.0.1:7861`. The first run bootstraps isolated environments and
+builds the frontend. Use only voices and audio you are authorized to process.
