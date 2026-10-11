@@ -1374,12 +1374,6 @@ pre {
     600 clamp(17px, 2.4vw, 23px)/1.5 Georgia,
     serif;
 }
-.transliteration {
-  color: var(--muted);
-  font-size: 12px;
-  font-style: italic;
-  line-height: 1.5;
-}
 .direction {
   display: flex;
   gap: 9px;

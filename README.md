@@ -10,6 +10,8 @@ or isolated vocal into **your own singing voice** with Seed-VC and local MPS
 acceleration. Audio, voice profiles, model training, and generated songs stay on
 your Mac—there is no cloud processing or account.
 
+![My Singing Voice Studio create screen](docs/studio-create-screen.png)
+
 > [!IMPORTANT]
 > Use only your own voice and audio you own, license, or have permission to
 > transform. This project is designed for consensual self-voice conversion, not
@@ -23,8 +25,8 @@ your Mac—there is no cloud processing or account.
   cleanup, instrumental remix, playback, and WAV export.
 - **Reusable voice profiles:** record once, then select the same identity for
   future generations.
-- **Guided voice dataset recording:** 20 original English and Hindi speech and
-  singing prompts with transliteration, range coaching, review, and retakes.
+- **Guided voice dataset recording:** 20 original speech and singing prompts
+  with range coaching, review, and retakes.
 - **Optional Seed-VC fine-tuning:** train a stronger personal singing model from
   clean clips and reuse its checkpoint automatically.
 - **Persistent jobs:** progress, logs, outputs, downloads, and existing results
@@ -82,8 +84,8 @@ Macs, Windows, and Linux are not supported by this release.
 
 The source singer supplies the melody, lyrics, rhythm, pronunciation, and
 expression. Seed-VC transfers vocal timbre; this is **voice-to-voice singing
-conversion**, not text-to-singing generation. Hindi and English work without a
-lyrics input because pronunciation comes from the performed source vocal.
+conversion**, not text-to-singing generation. Words and pronunciation come from
+the performed source vocal, so the app does not require a lyrics input.
 
 ## Build a trained singing voice profile
 
@@ -93,7 +95,7 @@ identity consistency when you provide a clean dataset of your own voice.
 1. Go to **Voice Profiles** and select your profile.
 2. Click **Start guided recording session**.
 3. Follow the speaking, sustained-vowel, low/middle/high range, legato, rhythm,
-   dynamics, Hindi, and English prompts.
+   dynamics, and articulation prompts.
 4. Listen to each take; record it again or save it to the profile.
 5. Record at least five minutes to unlock training. **10–30 minutes** of varied,
    clean singing is recommended for a stronger result.
@@ -262,11 +264,11 @@ Technically it performs voice conversion, but this application is intentionally
 designed for the user's own consensually recorded voice. Unauthorized cloning
 or impersonation is outside the project's intended use.
 
-### Can it convert Hindi and English songs?
+### Can it convert songs in different languages?
 
-Yes. Language and words come from the source performance, so no transcription
-or phoneme input is needed. Output quality depends on the performance, source
-separation, reference quality, and training coverage.
+Language and words come from the source performance, so no transcription or
+phoneme input is needed. Results depend on the performance, source separation,
+reference quality, and the sounds represented by the voice profile.
 
 ### Can it remove the original singer from a finished song?
 

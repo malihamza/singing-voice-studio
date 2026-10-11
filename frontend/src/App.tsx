@@ -63,7 +63,6 @@ type TrainingPrompt = {
   kind: "Speak" | "Sing";
   title: string;
   text: string;
-  transliteration?: string;
   direction: string;
   target: string;
   note?: number;
@@ -80,11 +79,10 @@ const trainingPrompts: TrainingPrompt[] = [
   },
   {
     kind: "Speak",
-    title: "Natural Hindi speech",
-    text: "आज मैं अपनी स्वाभाविक आवाज़ रिकॉर्ड कर रहा हूँ। मैं आराम से, साफ़ और बिना ज़ोर लगाए बोलूँगा।",
-    transliteration:
-      "Aaj main apni swabhavik aawaaz record kar raha hoon. Main aaraam se, saaf aur bina zor lagaye bolunga.",
-    direction: "Speak naturally at a comfortable pace.",
+    title: "Natural storytelling",
+    text: "I opened the window this morning, took a slow breath, and listened to the city waking up around me.",
+    direction:
+      "Tell the line as if you are speaking to a friend. Keep a relaxed, natural pace.",
     target: "12–18 seconds",
   },
   {
@@ -131,19 +129,16 @@ const trainingPrompts: TrainingPrompt[] = [
   },
   {
     kind: "Sing",
-    title: "Hindi middle melody",
-    text: "नई सुबह की रोशनी, मेरे दिल में रंग भरे।",
-    transliteration: "Nayi subah ki roshni, mere dil mein rang bhare.",
-    direction:
-      "Sing a smooth original melody in your natural Hindi pronunciation.",
+    title: "Gentle middle melody",
+    text: "Every little moment carries something new for me.",
+    direction: "Sing a smooth melody in the middle of your comfortable range.",
     target: "10–16 seconds",
     note: 220,
   },
   {
     kind: "Sing",
-    title: "Hindi expressive phrase",
-    text: "चलते चलते राहों में, एक नया सपना मिले।",
-    transliteration: "Chalte chalte raahon mein, ek naya sapna mile.",
+    title: "Expressive phrase",
+    text: "Along the road I found a dream that waited there for me.",
     direction: "Begin gently and let the phrase grow slightly stronger.",
     target: "10–16 seconds",
     note: 196,
@@ -194,10 +189,8 @@ const trainingPrompts: TrainingPrompt[] = [
   },
   {
     kind: "Sing",
-    title: "Hindi rhythmic phrase",
-    text: "धड़कन की लय में, कदमों की चाल में, गाता चलूँ मैं आज।",
-    transliteration:
-      "Dhadkan ki lay mein, kadmon ki chaal mein, gaata chalun main aaj.",
+    title: "Rhythmic articulation",
+    text: "Feel the rhythm, follow the motion, let every word land clearly.",
     direction: "Sing with a light rhythmic pulse and clear consonants.",
     target: "12–18 seconds",
     note: 220,
@@ -1152,9 +1145,10 @@ function ProfileDetail({
       <div className="mini-guide">
         <strong>How to prepare this voice</strong>
         <span>
-          Use Guided Recording for original Hindi/English prompts and range
-          coaching. Complete all 20 prompts, then repeat weaker sections until
-          you have at least five minutes; 10–30 minutes gives a stronger model.
+          Use Guided Recording for original speech and singing prompts with
+          range coaching. Complete all 20 prompts, then repeat weaker sections
+          until you have at least five minutes; 10–30 minutes gives a stronger
+          model.
         </span>
       </div>
       {guided && (
@@ -1266,9 +1260,6 @@ function GuidedSession({
           </div>
           <h3>{prompt.title}</h3>
           <blockquote>{prompt.text}</blockquote>
-          {prompt.transliteration && (
-            <p className="transliteration">{prompt.transliteration}</p>
-          )}
           <div className="direction">
             <BookOpen />
             <span>{prompt.direction}</span>
@@ -1355,7 +1346,7 @@ function RecordingGuide() {
           [
             "03",
             "Capture natural speech",
-            "Record calm conversational Hindi and English. Include different consonants and sustain “aa”, “ee”, and “oo” for several seconds.",
+            "Record calm conversational speech. Include different consonants and sustain “aa”, “ee”, and “oo” for several seconds.",
           ],
           [
             "04",
@@ -1390,7 +1381,7 @@ function RecordingGuide() {
             ["2 min", "Sustained vowels"],
             ["3 min", "Low and mid melodies"],
             ["3 min", "Higher comfortable melodies"],
-            ["3 min", "Hindi + English phrases"],
+            ["3 min", "Clear lyrical phrases"],
             ["2 min", "Soft and strong dynamics"],
           ].map(([a, b]) => (
             <div key={b}>
